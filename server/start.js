@@ -20,6 +20,8 @@ module.exports = app
   .use(express.static(resolve(__dirname, '..', 'public'))) // Serve static files from ../public
   .use('/api', require('./api')) // Serve our api
   .get('/*', (_, res) => res.sendFile(resolve(__dirname, '..', 'public', 'index.html'))) // Send index.html for any other requests.
+  .use((err, req, res, next) => // Error handling for server
+    res.status(err.status || 500).send(err.message || 'Sorry, there was an internal server error. Please try a different page or come back at another time.'));
 
   // notice the use of `_` as the first parameter above. This is a pattern for parameters that must exist, but you don't use or reference (or need) in the function body that follows.
 
