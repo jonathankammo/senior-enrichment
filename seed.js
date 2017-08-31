@@ -1,6 +1,4 @@
 const db = require('./db');
-// const User = require('./db/models/user');
-// const Campus = require('./db/models/campus');
 const {User, Campus} = require('./db/models');
 
 const users = [
