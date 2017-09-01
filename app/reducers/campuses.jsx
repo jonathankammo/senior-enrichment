@@ -57,7 +57,7 @@ export function createCampus (campus) {
 // REDUCER
 
 const campusReducer = function(state = [], action) {
-  switch(action.type) {
+  switch (action.type) {
     case GET_CAMPUS:
       return action.campus;
     case GET_CAMPUSES:

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import store from '../store.jsx';
+import { removeStudent } from '../reducers/students.jsx';
 import { connect } from 'react-redux';
 
 function mapStateToProps(state) {
@@ -10,9 +11,10 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    handleClick(e) {
-      dispatch()
-
+    handleClick: function (e) {
+      e.preventDefault();
+      let studentId = +e.target.name;
+      dispatch(removeStudent(studentId));
     }
   }
 }
@@ -30,7 +32,7 @@ function StudentList(props) {
         <td>{index + 1}</td>
         <td>{student.name}</td>
         <td>{student.campusId}</td>
-        <td><button className="glyphicon glyphicon-remove" /></td>
+        <td><button onClick={props.handleClick} name={student.id} className="glyphicon glyphicon-remove" /></td>
       </tr>
     );
   });

@@ -16,7 +16,32 @@ const users = [
     name: 'Chris Superman',
     email: 'chris@gmail.com',
     campusId: '2'
-  }
+  },
+  {
+    name: 'James Jefferson',
+    email: 'james@gmail.com',
+    campusId: '3'
+  },
+  {
+    name: 'Anita Watt',
+    email: 'anita@gmail.com',
+    campusId: '2'
+  },
+  {
+    name: 'Sarah Sarahson',
+    email: 'sarah@gmail.com',
+    campusId: '1'
+  },
+  {
+    name: 'Joann Hansen',
+    email: 'joann@gmail.com',
+    campusId: '2'
+  },
+  {
+    name: 'Stef Smith',
+    email: 'stef@gmail.com',
+    campusId: '3'
+  },
 ];
 
 const campuses = [

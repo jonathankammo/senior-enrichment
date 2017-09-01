@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import store from '../store.jsx';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
+import { withRouter } from 'react-router';
 
 function mapStateToProps(state) {
   return {
@@ -29,5 +30,5 @@ function NavBar(props) {
   );
 }
 
-const Container = connect(mapStateToProps)(NavBar);
+const Container = withRouter(connect(mapStateToProps)(NavBar));
 export default Container;
