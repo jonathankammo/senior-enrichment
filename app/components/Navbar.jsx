@@ -1,9 +1,33 @@
 import React, { Component } from 'react';
 import store from '../store.jsx';
 import { connect } from 'react-redux';
+import { NavLink } from 'react-router-dom';
 
-function mapStateToProps (state) {
+function mapStateToProps(state) {
   return {
-    
+
   }
 }
+
+// function mapDispatchToProps (dispatch) {
+//   return {
+
+//   }
+// }
+
+function NavBar(props) {
+  console.log('navbar component props: ', props);
+  // let channelId = +props.history.location.pathname.split('/')[2] - 1; // e.x) /channels/7
+  // let channelName = props.channels[channelId] ? props.channels[channelId].name : 'Create a channel';
+
+  return (
+    <nav>
+      <NavLink to="/">Home</NavLink>
+      <NavLink to="/api/students">Students</NavLink>
+      {/* <NameEntry /> */}
+    </nav>
+  );
+}
+
+const Container = connect(mapStateToProps)(NavBar);
+export default Container;

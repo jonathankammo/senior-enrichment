@@ -11,7 +11,7 @@ const defaultCampusProfilePics = [
   'https://www.ucollege.edu/files/users/webadmin/images/CampusPhotos/Ortner%20Center%20exterior.jpg'
 ]
 
-const getRandomDefaultImage = () => images[Math.floor(Math.random() * defaultCampusProfilePics.length )];
+const getRandomDefaultImage = () => defaultCampusProfilePics[Math.floor(Math.random() * defaultCampusProfilePics.length )];
 
 module.exports = db.define('campus', {
   name: Sequelize.STRING,
