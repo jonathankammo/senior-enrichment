@@ -21,11 +21,6 @@ function CampusList(props) {
   const { campuses } = props;
   const campusDiv = campuses.map((campus) => {
     return (
-      // <div key={campus.id}>
-      //   <NavLink to={`/api/channels/${campus.id}`} activeClassName="active">
-      //     Campus: {campus.name}
-      //   </NavLink>
-      // </div>
       <div className="col-xs-6" key={campus.id}>
         <NavLink className="thumbnail" to={`/api/campuses/${campus.id}`}>
           <img src={campus.image} />
@@ -33,7 +28,7 @@ function CampusList(props) {
             <h5>
               <span>{campus.name}</span>
             </h5>
-            {/* <small>{campus.songs.length} songs</small> */}
+             <small><button className="btn btn-danger btn-sm glyphicon glyphicon-remove" /></small>
           </div>
         </NavLink>
       </div>

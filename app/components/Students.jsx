@@ -32,13 +32,14 @@ function StudentList(props) {
         <td>{index + 1}</td>
         <td>{student.name}</td>
         <td>{student.campusId}</td>
-        <td><button onClick={props.handleClick} name={student.id} className="glyphicon glyphicon-remove" /></td>
+        <td><button onClick={props.handleClick} name={student.id} className="btn btn-sm btn-danger glyphicon glyphicon-remove" /></td>
       </tr>
     );
   });
 
   return (
     <div>
+      <h3>All University Students</h3>
       <table>
         <thead>
           <tr>

@@ -5,6 +5,8 @@ import CampusList from './Campuses.jsx';
 import StudentList from './Students.jsx';
 import Campus from './Campus.jsx';
 import Navbar from './Navbar.jsx';
+import Footer from './Footer.jsx';
+import Options from './Options.jsx';
 import store from '../store.jsx';
 import { Route, Redirect, Switch } from 'react-router-dom';
 
@@ -25,10 +27,12 @@ export default class Root extends Component {
         <Switch>
           <Route exact path="/api/campuses" component={CampusList} />
           <Route exact path="/" component={CampusList} />
-           <Route path="/api/campuses/*" component={Campus} /> 
+          <Route path="/api/campuses/*" component={Campus} />
           <Route path="/api/students" component={StudentList} />
-           {/* <Redirect to="/api/campuses" component={CampusList} />  */}
+          {/* <Redirect to="/api/campuses" component={CampusList} />  */}
         </Switch>
+        <Options />
+        <Footer />
       </div>
     )
   }
