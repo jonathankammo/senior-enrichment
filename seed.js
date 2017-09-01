@@ -53,6 +53,9 @@ const campuses = [
   },
   {
     name: 'University of Florida'
+  },
+  {
+    name: 'California State'
   }
 ];
 

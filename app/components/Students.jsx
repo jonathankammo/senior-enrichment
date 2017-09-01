@@ -13,7 +13,7 @@ function mapDispatchToProps(dispatch) {
   return {
     handleClick: function (e) {
       e.preventDefault();
-      let studentId = +e.target.name;
+      let studentId = e.target.name;
       dispatch(removeStudent(studentId));
     }
   }

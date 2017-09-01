@@ -19,8 +19,8 @@ function mapStateToProps(state) {
 function Options(props) {
 
   return (
-    <div className="center">
-      <button className="btn btn-primary"> Add! <span className="glyphicon glyphicon-add" /></button>
+    <div>
+      <button name="add" className="btn btn-primary"> Add! <span className="glyphicon glyphicon-add" /></button>
     </div>
   )
 }

@@ -66,6 +66,7 @@ export function removeStudent (studentId) {
     return axios.delete(`/api/students/${studentId}`)
       .then(res => res.data)
       .then(deletedStudent => {
+        console.log('thunk/axios deletedStudent: ', deletedStudent);
         dispatch(deleteStudent(deletedStudent))
       });
   };
