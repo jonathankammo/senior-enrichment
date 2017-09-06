@@ -43,6 +43,13 @@ campusRouter.delete('/:campusId', function (req, res, next) {
   })
     .then(() => res.status(204).end())
     .catch(next);
+
+    /*
+    Could just use res.sendStatus(204) which will end the
+    response implicitly, so you don't have to call end().
+
+    Otherwise your routes for campuses and students look great!
+    */
 });
 
 

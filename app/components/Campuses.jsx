@@ -44,5 +44,10 @@ function CampusList(props) {
 
 const connector = connect(mapStateToProps);
 
+/*
+No need for the withRouter wrapping here. The only information you are accessing
+from props is campuses, which you place there manually through your mapStateToProps function.
+*/
+
 const CampusListContainer = withRouter(connector(CampusList));
 export default CampusListContainer;

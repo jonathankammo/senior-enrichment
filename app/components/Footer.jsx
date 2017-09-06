@@ -29,5 +29,11 @@ function Footer(props) {
   );
 }
 
+/*
+No need for withRouter or connect here. There are no dispatch methods needed
+nor is there any state that the footer is concerned with, so the footer, in this
+case, could just be a pure function that returns some HTML since it is just static content.
+*/
+
 const Container = withRouter(connect(mapStateToProps)(Footer));
 export default Container;

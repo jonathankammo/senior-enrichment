@@ -37,3 +37,20 @@ export default class Root extends Component {
     )
   }
 }
+
+/*
+A couple of comments on your routes:
+
+The routes above are prepended with /api which mirrors a backend REST
+pattern, which you definitely want to keep separate from front end routes.
+If I type "api/campuses" into the url, according to your routes above, it
+should render CampusList. However, it hits your backend route first, which renders
+JSON of all the campuses because your server code has middleware set up to route
+all requests prepended with /api to a separate (backend) router, which from there
+finds an exact match for this url, and is set up to res.json all campuses.
+
+So I would stay away from writing /api into any of your front end routes
+
+Also, there is no difference in /api/campuses as opposed to just going to '/'
+or root, so that route could be eliminated completely.
+*/

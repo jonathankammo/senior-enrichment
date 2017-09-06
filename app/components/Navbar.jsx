@@ -30,5 +30,10 @@ function NavBar(props) {
   );
 }
 
+/*
+Could also just be a dumb component. Doesn't need state or dispatch access to store
+or any objects passed from React Router.
+*/
+
 const Container = withRouter(connect(mapStateToProps)(NavBar));
 export default Container;
